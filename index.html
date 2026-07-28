@@ -273,8 +273,8 @@ function renderResult(empId, row, city){
   }
   // On-time sub
   var otSub = "@ Rs 30 per on-time trip";
-  // On-shift sub
-  var onshiftSub = "@ Rs 15 per task";
+  // On-time attendance bonus sub
+  var onshiftSub = "@ Rs 15 per on-time attendance";
   // KM payout sub (hide if trips unavailable)
   var kmSub = row.trips > 0 ? (row.trips + " trips") : null;
 
@@ -283,7 +283,7 @@ function renderResult(empId, row, city){
   earningsRows += moneyRow("Trip Incentive", row.trip_incentive, tripSub);
   earningsRows += moneyRow("Per Trip KM Payout", row.km_payout, kmSub);
   earningsRows += moneyRow("Trips On-Time Incentive", row.ontime_inc, otSub);
-  earningsRows += moneyRow("On-Shift Tasks Amount", row.onshift, onshiftSub);
+  earningsRows += moneyRow("On-Time Attendance Bonus", row.onshift, onshiftSub);
   if(row.b2b > 0) earningsRows += moneyRow("Additional KM / B2B Rounds", row.b2b);
   if(row.airport > 0) earningsRows += moneyRow("Airport / NRL Duty", row.airport);
   if(row.tl_bonus > 0) earningsRows += moneyRow("TL Bonus", row.tl_bonus);
