@@ -141,13 +141,10 @@ body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--text);min
 <div class="cycle-panel">
   <div class="cycle-title"><span class="icn">i</span>Important &mdash; Please Read Before Checking</div>
   <div class="note">
-    <span class="ntag blr-mum">BLR &middot; MUM &middot; PNQ</span>
+    <span class="ntag blr-mum">BLR &middot; MUM &middot; NCR &middot; PNQ</span>
     <div class="nbody"><strong>Incentive Cycle:</strong> <span class="highlight">21st July to 20th August</span></div>
   </div>
-  <div class="note">
-    <span class="ntag ncr">NCR</span>
-    <div class="nbody"><strong>Fixed Salary Cycle:</strong> 1st &ndash; 31st July (paid as July salary). <br><strong>For this cycle:</strong> you are paid <span class="highlight">Incentives for 21st July &ndash; 20th August</span>, along with <span class="highlight">MG Payout calculated from 1st &ndash; 20th August</span>.</div>
-  </div>
+
   <div class="note">
     <span class="ntag all">ALL CITIES</span>
     <div class="nbody"><strong>15th August Payout:</strong> Independence Day additional payout is included in this cycle where applicable.</div>
@@ -280,12 +277,7 @@ function renderResult(empId, row, city){
   var hubTag = row.hub && row.hub !== "N/A" ? '<span class="tag hub" title="' + row.hub + '">' + row.hub + '</span>' : '';
 
   // Cycle info based on city
-  var cycleInfo;
-  if(city === "NCR"){
-    cycleInfo = '<div class="city-cycle-note"><strong>NCR Cycle:</strong> Incentives shown are for 21st July &ndash; 20th August. MG Payout is calculated from 1st &ndash; 20th August. Fixed Salary (1st &ndash; 31st July) has been paid separately as July salary.</div>';
-  } else {
-    cycleInfo = '<div class="info-note"><strong>Note:</strong> Incentive cycle is 21st July to 20th August. For any discrepancy, please reach out to your Team Lead.</div>';
-  }
+  var cycleInfo = '<div class="info-note"><strong>Note:</strong> Incentive cycle is 21st July to 20th August. For any discrepancy, please reach out to your Team Lead.</div>';
 
   card.innerHTML =
     '<div class="emp-header">' +
